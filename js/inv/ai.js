@@ -60,7 +60,7 @@
   function merge(base, ai) {
     const fields = Object.assign({}, base); const filled = []; const suggestions = [];
     KEYS.forEach((k) => {
-      if (blank(ai[k]) || (k === 'docType' && ai[k] === 'invoice' && base.docType)) return;
+      if (blank(ai[k]) || (k === 'docType' && ai[k] === 'invoice')) return;
       if (blank(base[k])) { fields[k] = ai[k]; filled.push(k); }
       else if (String(base[k]) !== String(ai[k])) suggestions.push({ key: k, current: base[k], suggested: ai[k] });
     });

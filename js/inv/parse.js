@@ -7,7 +7,7 @@
 })(typeof self !== 'undefined' ? self : this, function (M) {
   'use strict';
   const NUM = '[-(]?(?:[A-Z]{3}\\s?)?(?:[A-Z]{0,2}\\$|[£€¥₹])?\\s?(?:\\d{1,3}(?:[,.\\u00a0 ]\\d{3})+(?:[.,]\\d{1,2})?|\\d+(?:[.,]\\d+)?)\\)?';
-  const AMT_END = new RegExp('(' + NUM + ')\\s*(?:CR)?\\s*$');
+  const AMT_END = new RegExp('(' + NUM + ')\\s*(?:CR\\b|[£€¥₹]|[A-Z]{3}\\b)?\\s*$');
   const DATE = M.DATE_RE.source;
   const TITLE = /\s*\b(tax\s+invoice|commercial\s+invoice|invoice|credit\s+note|credit\s+memo|bill|receipt|statement)\b\s*$/i;
   const UNITS = 'hrs?|hours?|ea|each|pcs?|pc|units?|mo|months?|seats?|kwh|kg|lbs?|days?|case|box|pack|night|nights|visit|visits|pp|person|people|lot|set|m|ft|sqft|gb|tb|license|licenses|item|items|unit';

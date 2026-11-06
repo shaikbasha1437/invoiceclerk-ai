@@ -1,0 +1,10 @@
+{
+  "name": "invoiceclerk-server",
+  "version": "1.0.0",
+  "description": "Optional self-hosted push server for InvoiceClerk AI: forwards bills to QuickBooks Online or Xero with your own token. Zero dependencies.",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": { "start": "node index.js", "test": "node --test test/" },
+  "engines": { "node": ">=18" }
+}
