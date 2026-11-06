@@ -80,7 +80,7 @@ Then in the app: Settings → Server → URL `http://127.0.0.1:8787` (and the to
 - Only origins listed in `ALLOWED_ORIGIN` are allowed (CORS). Bodies are capped at 256 KB.
 - `QBO_VENDOR_MAP` and `QBO_ACCOUNT_MAP` map InvoiceClerk vendor names and account codes to QuickBooks Ids.
 - Tokens are plain OAuth access tokens you paste in: QuickBooks tokens last about 1 hour, Xero about 30 minutes. The server does not refresh them.
-- When the page is served over HTTPS and the server is on `localhost`, Chrome asks you to allow **local network access** the first time; allow it, or the request fails with "Failed to fetch".
+- When the page is served over HTTPS and the server is on `localhost`, Chrome and Firefox ask you to allow **local network access** the first time; allow it, or the request fails with "Failed to fetch".
 
 ## Exports: caveats
 
