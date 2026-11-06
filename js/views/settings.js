@@ -65,7 +65,7 @@
         h('label', { class: 'f' }, 'Server URL', url), h('label', { class: 'f' }, 'Shared token', tok),
         h('div', { class: 'actions' },
           h('button', { type: 'button', class: 'btn primary', id: 'save-server', onclick: () => { app.saveSettings({ serverUrl: url.value.trim() }); app.keys.set('server', tok.value, 'local'); toast('Saved.'); } }, 'Save'),
-          h('button', { type: 'button', class: 'btn', id: 'check-server', onclick: async () => { try { const r = await fetch(url.value.trim().replace(/\/+$/, '') + '/health'); const j = await r.json(); toast('Server OK: ' + (j.dryRun ? 'dry-run' : 'live') + ' \u00b7 QuickBooks ' + (j.qbo ? 'configured' : 'not set') + ' \u00b7 Xero ' + (j.xero ? 'configured' : 'not set')); } catch (e) { toast('Could not reach the server: ' + e.message); } } }, 'Check'))));
+          h('button', { type: 'button', class: 'btn', id: 'check-server', onclick: async () => { try { const r = await fetch(url.value.trim().replace(/\/+$/, '') + '/health'); const j = await r.json(); toast('Server OK: ' + (j.dryRun ? 'dry-run' : 'live') + ' \u00b7 QuickBooks ' + (j.qbo ? 'configured' : 'not set') + ' \u00b7 Xero ' + (j.xero ? 'configured' : 'not set')); } catch (e) { toast('Could not reach the server: ' + e.message + '. Is it running, does ALLOWED_ORIGIN include this site, and did you allow local network access if the browser asked?'); } } }, 'Check'))));
     }
     if (sec === 'data') {
       body.append(panel('Data',

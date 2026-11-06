@@ -52,7 +52,7 @@
       const j = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error((j && j.error) || 'HTTP ' + r.status);
       toast(j.dryRun ? 'Server dry run OK: it would POST to ' + j.wouldPost : 'Server forwarded it: ' + (j.status || r.status) + (j.id ? ' id ' + j.id : ''));
-    } catch (e) { toast('Server push failed: ' + e.message + ' (is it running, and does ALLOWED_ORIGIN include this site?)'); }
+    } catch (e) { toast('Server push failed: ' + e.message + ' (is it running, does ALLOWED_ORIGIN include this site, and did you allow local network access if the browser asked?)'); }
   }
   IC.app.views.export = { render };
 })(self);
