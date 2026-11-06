@@ -86,7 +86,8 @@
   }
   function errorMessage(provider, status, j, text) {
     const raw = (j && ((j.error && (j.error.message || j.error.type)) || j.message)) || text || '';
-    const hint = status === 401 || status === 403 ? 'The key was rejected. Check it and try again.' : status === 404 ? 'Model or endpoint not found. Check the model name and base URL.' : status === 429 ? 'Rate limit or quota reached on your account. Wait a moment or check billing.' : status >= 500 ? 'The provider had a server error. Try again.' : '';
+    const badKey = status === 401 || status === 403 || (status === 400 && /api key|api_key/i.test(String(raw)));
+    const hint = badKey ? 'The key was rejected. Check it and try again.' : status === 404 ? 'Model or endpoint not found. Check the model name and base URL.' : status === 429 ? 'Rate limit or quota reached on your account. Wait a moment or check billing.' : status >= 500 ? 'The provider had a server error. Try again.' : '';
     return (hint ? hint + ' ' : '') + '(' + (PROVIDERS[provider] ? PROVIDERS[provider].label : provider) + ' ' + status + (raw ? ': ' + String(raw).slice(0, 200) : '') + ')';
   }
   /* Call the model. deps: { fetch, now, timeoutMs, signal }. Returns { text, usage, latencyMs, cost, model }. */
