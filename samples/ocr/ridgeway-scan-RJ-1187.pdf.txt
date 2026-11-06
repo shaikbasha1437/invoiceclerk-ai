@@ -1,0 +1,14 @@
+Ridgeway Janitorial INVOICE
+560 Elm Street Invoice # RJ-1187
+McKinney, TX 75069 Invoice date: 10/31/2026
+office @ridgeway-clean.example SO number: POT
+Bill to
+Acme Example Co.
+900 Market St, Frisco, TX 75034
+Description Qty Unit Unit price Amount
+Office cleaning, October (weekly) 4 visit 180.00 720.00
+Carpet shampoo, main floor 1 ea 240.00 240,00
+Subtotal 960.00
+Tax 0.00
+Total due (USD) $960.00
+Fictional sample generated for the InvolceClerk Al demo. Nota real company of invoice.

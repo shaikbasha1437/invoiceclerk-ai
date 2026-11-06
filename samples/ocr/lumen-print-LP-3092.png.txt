@@ -1,0 +1,16 @@
+Lumen Print Shop INVOICE
+301 W Main St Invoice #  LP-3092
+Frisco, TX 75033 Invoice date: 10/17/2026
+orders@lumenprint example Due date: 11/16/2026
+PO number: PO-7795
+Terms: Net 30
+Bill to
+Acme Example Co.
+900 Market St, Frisco, TX 75034
+Description Qty Unit Unit price Amount
+‘Trade show banners, 3x6 ft 2 ea 145.00 290.00
+Business cards, 500 pack 4 pack 39.00 156.00
+Subtotal 446.00
+Sales tax (8.25%) 36.80
+Total due (USD) $482.80
+Fictional sample generated for the InvoiceClerk AI demo. Not a real company or invoice.
